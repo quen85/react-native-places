@@ -11,24 +11,26 @@ import {
 import PlaceList from "./PlaceList";
 import Header from "./Header";
 import Footer from "./Footer";
+import styled from 'styled-components/native';
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: "#ecf0f1"
-  },
   content: {
     flex: 0,
     alignItems: "center"
   }
 });
 
+const PlacesView = styled.View`
+  background-color: #000;
+  flex: 1;
+`;
+
 const Places = props => (
-  <View style={styles.root}>
+  <PlacesView>
     <Header onAdd={props.addItem} />
     <ScrollView contentContainerStyle={styles.content}>
       <PlaceList places={props.places} onSelectItem={props.onToggleItem} />
     </ScrollView>
-  </View>
+  </PlacesView>
 );
 export default Places;

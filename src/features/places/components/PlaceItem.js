@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import styled from 'styled-components/native';
 
 const styles = StyleSheet.create({
   item: {
@@ -10,13 +11,18 @@ const styles = StyleSheet.create({
   }
 });
 
+const PlaceItem = styled.Text`
+  font-size: 32;
+  color: #FFF;
+`;
+
 const Item = props => {
   const itemStyle = props.visited
     ? [styles.item, styles.itemVisited]
     : styles.item;
   return (
     <TouchableOpacity onPress={props.onPress}>
-      <Text style={itemStyle}>{props.label}</Text>
+      <PlaceItem style={itemStyle}>{props.label}</PlaceItem>
     </TouchableOpacity>
   );
 };
