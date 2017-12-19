@@ -29,7 +29,6 @@ const Places = props => (
     <ScrollView contentContainerStyle={styles.content}>
       <PlaceList places={props.places} onSelectItem={props.onToggleItem} />
     </ScrollView>
-    <Footer onSelectFilter={props.updateFilter} selected={props.filter} />
   </View>
 );
 export default Places;
