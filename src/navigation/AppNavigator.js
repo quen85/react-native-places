@@ -10,6 +10,7 @@ import Home from "../features/home";
 import Places from "../features/places";
 import Around from "../features/around";
 import Friends from "../features/friends";
+import Filters from "../features/filters";
 
 const Tabs = TabNavigator({
   Places: {
@@ -46,9 +47,7 @@ const Drawer = DrawerNavigator(
   {
     drawerPosition: "right",
     contentComponent: props => (
-      <View>
-        <Text {...props}>Hello Drawer</Text>
-      </View>
+      <Filters />
     )
   }
 );
