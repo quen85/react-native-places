@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
 
 const HeaderView = styled.View`
   background-color: #000;
-  color: #FFF;
   align-items: center;
   justify-content: center;
   height: 80;
